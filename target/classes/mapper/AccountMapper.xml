@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ll.mapper.AccountMapper">
+    <resultMap id="resultMap" type="ll.pojo.Account">
+        <id column="id" property="id" javaType="int"></id>
+        <result column="name" property="name" javaType="java.lang.String"></result>
+        <result column="money" property="money" javaType="java.lang.String"></result>
+    </resultMap>
+
+
+    <!--于接口对应的方法-->
+    <select id="getAllAccount" resultMap="resultMap">
+        SELECT
+       *
+        FROM account
+    </select>
+
+</mapper>
